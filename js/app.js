@@ -27,9 +27,6 @@ $('#startGame').on('click', function(){
 			$('#startGame').html('Pause');
 		}
 
-
-		// $('#startGame').html('Back');
-
 });
 
 
@@ -174,7 +171,6 @@ function jogo(){
 		  if(seg === 60){
 		  	min++;
 		  	minuto.html(min);
-		  	console.log(min);
 		  	seg = 0;
 		  }else{
 		  	segundo.html(seg);
@@ -192,7 +188,7 @@ function jogo(){
 		modal.css('background-color','rgba(255, 255, 255,0.8)'); //melhor transparencia
 		$('#score').html('With ' + movimentos + ' moves and ' + starCount + ' Stars!'); //texto na tela modal
 		if(min > 0){
-			$('#timer').html("The game took " + min + " minutes and " + seg + "seconds");
+			$('#timer').html("The game took " + min + " minutes and " + seg + " seconds");
 		}else{
 			$('#timer').html("The game took " + seg + " seconds");
 		}
