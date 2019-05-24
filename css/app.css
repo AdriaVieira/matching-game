@@ -1,0 +1,293 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 660px;
+    height: 680px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    transform: rotateY(0deg); /*rotaçao em 0deg da carta*/
+    transition-duration: 1s; /*tempo da transicao*/
+}
+
+.deck .card.open {
+    transform: rotateY(180deg); /*rotaçao em 180deg da carta*/
+    transition-duration: 1s; /*tempo da transicao*/
+    background: #02b3e4;
+    cursor: default;
+}
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #02ccba;
+    font-size: 33px;
+}
+
+.card:hover{
+    box-shadow: 0 0 10px #ccc;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: left;
+    width: 345px;
+    margin-bottom: 10px;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+}
+
+.modal{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255,0);
+    text-align: center;
+    z-index: -2;
+}
+
+.text{
+    margin-top: 250px;
+}
+
+#botao{
+    font-size: 20px;
+    border-radius: 8px;
+    background-color: #00CED1;
+    width: 130px;
+    height: 40px;
+}
+
+#startGame{
+    position: absolute;
+    margin-top: 25px;
+    left: 350px;
+    width: 50px;
+    height: 30px;
+    background-color: #00FFFF;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+@keyframes bounce{
+    10%, 25%, 35%{
+        transform: translateY(-10px);
+    }
+    40%, 50%{
+        transform: translateY(10px);
+    }
+}
+
+.match{
+    animation: bounce .8s;
+}
+
+
+@media only screen and (max-width: 760px) {
+    .deck{
+        width: 550px;
+    }
+
+    .deck .card{
+        width: 100px;
+    }
+
+    #startGame{
+        left: 50px;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .deck{
+        width: 500px;
+    }
+
+    .deck .card{
+        width: 90px;
+    }
+
+    #startGame{
+        left: 20px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .deck{
+        width: 480px;
+    }
+
+    .deck .card{
+        width: 90px;
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .deck{
+        width: 400px;
+        height: 500px;
+    }
+
+    .deck .card{
+        width: 70px;
+        height: 90px;
+        /*margin-bottom: 5px;*/
+    }
+
+    .score-panel .stars{
+        margin-left: 10px;
+    }
+
+    .fa-repeat{
+        margin-right: 25px;
+    }
+
+    #startGame{
+        left: 30px;
+        width: 50px;
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .deck{
+        width: 320px;
+        height: 390px;
+    }
+
+    .deck .card{
+        width: 60px;
+        height: 80px;
+        margin-bottom: 5px;
+    }
+
+    .score-panel .stars{
+        margin-left: 10px;
+    }
+
+    .fa-repeat{
+        margin-right: 25px;
+    }
+
+    #startGame{
+        left: 10px;
+    }
+}
+
+@media only screen and (max-width: 370px){
+    #startGame{
+        top: 40px;
+        left: 250px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .deck{
+        width: 280px;
+        height: 500px;
+    }
+
+    .deck .card{
+        width: 50px;
+        height: 60px;
+    }
+
+    .score-panel .stars{
+        margin-left: 50px;
+    }
+
+    .fa-repeat{
+        margin-right: 80px;
+    }
+
+    h1{
+        font-size: 25px;
+    }
+
+    #startGame{
+        top: 30px;
+        left: 190px;
+    }
+}
+
