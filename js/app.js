@@ -1,3 +1,4 @@
+
 var cartasViradas = []; //array que recebera as duas cartas viradas
 var simbolo = []; //array de verificacao se simbolos sao iguais
 var pontos = 0; //contagem de quantos acertos foram feitos
@@ -32,7 +33,6 @@ $('#startGame').on('click', function(){
 
 function jogo(){
 	start(); //inicio do jogo
-
 	//funcao que adiciona um evento aos elementos do deck
 	$(".deck").on("click", function(evt){
 			if(evt.target.nodeName.toLowerCase() === 'li'){
