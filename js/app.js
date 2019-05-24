@@ -33,7 +33,6 @@ $('#startGame').on('click', function(){
 
 function jogo(){
 	start(); //inicio do jogo
-	gameOver();
 	//funcao que adiciona um evento aos elementos do deck
 	$(".deck").on("click", function(evt){
 			if(evt.target.nodeName.toLowerCase() === 'li'){
