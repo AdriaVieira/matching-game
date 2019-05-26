@@ -1,32 +1,34 @@
 
-var cartasViradas = []; //array que recebera as duas cartas viradas
-var simbolo = []; //array de verificacao se simbolos sao iguais
-var pontos = 0; //contagem de quantos acertos foram feitos
-var cartas; //variavel receberá as cartas do baralho
-var modal = $('.modal'); //chamada da tela modal
-var movimentos = 0; //contagem de movimentos
-var stars = $('.fa-star'); //array que recebera os elementos com a classe fa-star
-var starCount = 3; //contagem das estrelas
-var segundo = $('#segundo'); //recebe o id segundo usado no temporizador
-let minuto = $('#minuto'); //recebe o id minuto usado no temporizador
-var seg = 0; //variavel de incremento usado no temporizador
-var min = 0; //variavel de incremento usado no temporizador
-var reset;
-var paused = false;
+let cartasViradas = []; //array que recebera as duas cartas viradas
+let simbolo = []; //array de verificacao se simbolos sao iguais
+let pontos = 0; //contagem de quantos acertos foram feitos
+let cartas; //variavel receberá as cartas do baralho
+const modal = $('.modal'); //chamada da tela modal
+let movimentos = 0; //contagem de movimentos
+const stars = $('.fa-star'); //array que recebera os elementos com a classe fa-star
+let starCount = 3; //contagem das estrelas
+const segundo = $('#segundo'); //recebe o id segundo usado no temporizador
+const minuto = $('#minuto'); //recebe o id minuto usado no temporizador
+let seg = 0; //variavel de incremento usado no temporizador
+let min = 0; //variavel de incremento usado no temporizador
+let reset;
+let paused = false;
 
+//evento para o botao de start
 $('#startGame').on('click', function(){
-		if($('#startGame').html() === "Start"){
-			jogo();
-			$('#startGame').html('Pause');
+	//condicoes para o botao pause
+	if($('#startGame').html() === "Start"){
+	jogo();
+	$('#startGame').html('Pause');
 
-		}else if($('#startGame').html() === "Pause"){
-			paused = true;
-			$('#startGame').html('Back');
+	}else if($('#startGame').html() === "Pause"){
+		paused = true;
+		$('#startGame').html('Back');
 
-		}else if($('#startGame').html() === "Back"){
-			paused = false;
-			$('#startGame').html('Pause');
-		}
+	}else if($('#startGame').html() === "Back"){
+		paused = false;
+		$('#startGame').html('Pause');
+	}
 
 });
 
