@@ -102,11 +102,6 @@ function jogo(){
 			var second = stars[1];
 			second.remove();
 			starCount--;
-
-		}else if(movimentos === 25){
-			var third = stars[2];
-			third.remove();
-			starCount--;
 		}
 	}
 
