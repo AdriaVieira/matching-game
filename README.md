@@ -4,7 +4,7 @@
 
 ### Pré-requisitos
 
-*Só precisará de um editor de texto e de um explorer, de preferência o Google Chrome*
+*Para que o jogo funcione, precisará abrir o arquivo index.html com um navegador web. De preferência, o Google Chrome.*
 
 ### Como jogar
 
