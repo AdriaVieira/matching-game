@@ -228,7 +228,6 @@ function jogo(){
 	        array[randomIndex] = temporaryValue;
 	    }
 
-	    // console.log(array);
 	    return array;
 	}
 
