@@ -15,8 +15,7 @@
 > Ao clicar o **botão reset**, o jogo começa de novo, embaralhando as cartas, os movimentos zeram, as estrelas voltam e o tempo reinicia.
 > Ao ganhar o jogo, aparecerá uma **tela modal**, mostrando o tempo, os movimentos, a quantidade de estrelas e se o usuário deseja jogar novamente.
 
-### Como jogar
-*Link para jogar: https://adriavieira314.github.io/matching-game/* 
+### Link para jogar: https://adriavieira314.github.io/matching-game/* 
 
 ## Version
 *Version 1.0*
